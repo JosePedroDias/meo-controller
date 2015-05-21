@@ -1,6 +1,6 @@
 {
   "name": "meo-controller",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "control your MEO box with nodejs",
   "main": "index.js",
   "dependencies": {
