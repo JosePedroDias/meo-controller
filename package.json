@@ -1,0 +1,28 @@
+{
+  "name": "meo-controller",
+  "version": "1.0.0",
+  "description": "control your MEO box with nodejs",
+  "main": "index.js",
+  "dependencies": {
+    "telnetit": "0.0.1"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JosePedroDias/meo-controller.git"
+  },
+  "keywords": [
+    "meo",
+    "remote",
+    "box",
+    "telnet",
+    "tv"
+  ],
+  "author": {
+    "name": "José Pedro Dias",
+    "email": "jose.pedro.dias@gmail.com",
+    "url": "http://josepedrodias.com/"
+  },
+  "license": "ISC"
+}
