@@ -25,7 +25,14 @@ var invokeTimed = function(arr, fn, ms, endCb) {
 meo(function(err, api) {
     if (err) { return console.error(err); }
 
-    //api.sendKey('p+');
+
+
+    //11 menu
+    //32 space
+    //166 browser_back
+    //46 delete
+
+    api.sendKey('v-');
 
     //api.sendNum(46);
 
