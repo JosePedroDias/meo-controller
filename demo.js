@@ -2,7 +2,7 @@ var meo = require('./index');
 
 
 
-var invokeTimed = function(arr, fn, ms, endCb) {
+/*var invokeTimed = function(arr, fn, ms, endCb) {
     var t;
 
     var cb = function() {
@@ -18,7 +18,7 @@ var invokeTimed = function(arr, fn, ms, endCb) {
     };
 
     t = setInterval(cb, ms);
-}
+};*/
 
 
 

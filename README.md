@@ -3,6 +3,9 @@
 The MEO box has a telnet interface to receive remote control commands.  
 This module exposes it in a friendly manner.
 
+Kudos to the project [telnetit](https://github.com/sxyizhiren/telnetit).  
+Using a refactored/simplified version of it.
+
 
 ## installing
 

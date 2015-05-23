@@ -4,7 +4,6 @@
   "description": "control your MEO box with nodejs",
   "main": "index.js",
   "dependencies": {
-    "telnetit": "0.0.1"
   },
   "scripts": {
   },
