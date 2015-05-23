@@ -90,7 +90,7 @@ Telnet.prototype.connect = function (opts) {
 
 Telnet.prototype.processBuffer = function (buffer) {
     var _self = this;
-    var result = {}
+    var result = {};
     result.cmd = [];
     result.data = [];
     var negotiation = { IAC: false, operation: "", option: "" };
@@ -106,7 +106,7 @@ Telnet.prototype.processBuffer = function (buffer) {
                     negotiation.option += this.option[buffer[i]] + " ";
                     i++;
                 }
-                negotiation.option += this.operation[buffer[i]] + "." + this.operation[buffer[i + 1]]
+                negotiation.option += this.operation[buffer[i]] + "." + this.operation[buffer[i + 1]];
                 i++;
             } else {
                 negotiation.option = this.option[buffer[i]];
@@ -160,19 +160,10 @@ Telnet.prototype.processBuffer = function (buffer) {
                 }
                 break;
             case "DONT":
-                switch (result.cmd[key].option) {
-                    default:
-                        res_CMD += result.cmd[key].option;
-                        break;
-                }
+                res_CMD += result.cmd[key].option;
                 break;
             case "WONT":
-                switch (result.cmd[key].option) {
-                    default:
-                        res_CMD = "IAC.DONT." + result.cmd[key].option;
-                        break;
-                }
-            default:
+                res_CMD = "IAC.DONT." + result.cmd[key].option;
                 break;
         }
         if (_self._log) {
@@ -244,7 +235,7 @@ Telnet.prototype.cmdtoBuffer = function (cmd) {
     return new Buffer(buffer);
 };
 
-Telnet.prototype.destroy = function (cmd) {
+Telnet.prototype.destroy = function () {
     this._sock.destroy();
     this._sock = null;
 };
@@ -274,7 +265,6 @@ function TelnetInst(){
 
     this.onerrorHandler = function(error){
         //1. close connect 2. call callback  3.call onTelnetConnError to reconnect
-        _this.clearWatcher(error);
         _this.close();
         connectCallback(error);
         connectCallback = noop;
@@ -286,7 +276,7 @@ function TelnetInst(){
         if(reportErrorHandler){reportErrorHandler(_this,error);}
     });
 
-    c.on('close', function (had_error) {
+    c.on('close', function () {
         _this.close();
     });
 
